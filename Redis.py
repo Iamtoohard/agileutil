@@ -115,14 +115,14 @@ if __name__ == '__main__':
 	#r = redis.Redis(host='localhost', port=6379, db=0, password='qihoo360')
 	serverList = [
 		{
-			'host'     : '10.16.77.129',
+			'host'     : '192.168.1.1',
 			'port'     : 6379,
 			'db'       : 0,
 			'password' : '',
 		},
 
 		{
-			'host'     : '10.16.77.128',
+			'host'     : '192.168.1.2',
 			'port'     : 6379,
 			'db'       : 0,
 			'password' : '',
