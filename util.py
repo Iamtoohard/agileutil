@@ -172,3 +172,30 @@ def get_file_content(file):
 def filter(str):
     ret = str.replace("&amp;", "&")
     return ret
+
+def download(url, filename):
+    """
+    download file and save to spefic path 
+    """
+    try:
+        urllib.urlretrieve(url, filename)
+    except Exception, ex:     
+        return False
+    return True
+
+def today():
+    return datetime.date.today()
+
+def lastday():
+    return today() - datetime.timedelta(1)
+
+def tommorrow():
+    return today() + datetime.timedelta(1)
+
+def stampToDateString(stamp):
+    return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(stamp)))
+
+def dateStringToStamp(dateString):
+    return int(time.mktime(time.strptime(dateString,'%Y-%m-%d %H:%M:%S')))
+
+
